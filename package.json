@@ -1,0 +1,37 @@
+{
+  "name": "teleprint",
+  "private": true,
+  "main": "server.js",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "start:reza": "next start",
+    "postbuild": "next-sitemap",
+    "start:mostafa": "node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.1.3",
+    "@stripe/stripe-js": "^3.0.10",
+    "axios": "^0.24.0",
+    "jetemit": "^7.0.2",
+    "moment": "^2.30.1",
+    "next": "12.0.7",
+    "next-sitemap": "^4.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "^6.1.1",
+    "rsuite": "^4.10.2",
+    "stripe": "^14.22.0",
+    "swiper": "^6.7.0",
+    "universal-cookie": "^4.0.4",
+    "webdav": "^5.7.1"
+  },
+  "devDependencies": {
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "sharp": "^0.30.7"
+  }
+}

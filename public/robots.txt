@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://druck-teleprint.at
+
+# Sitemaps
+Sitemap: https://druck-teleprint.at/sitemap.xml

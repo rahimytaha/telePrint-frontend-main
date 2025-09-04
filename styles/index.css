@@ -1,0 +1,381 @@
+/** @format */
+/* @import url("../node_modules/rsuite/dist/rsuite-rtl.css"); */
+@import url("../public/assets/css/teleprint1.css");
+@import url("../public/assets/css/teleprint2.css");
+@import url("../node_modules/rsuite/dist/styles/rsuite-default.min.css");
+@import url("../public/assets/icon/MaterialDesign-Webfont-master/css/materialdesignicons.min.css");
+@import url("../public/assets/css/reset.css");
+@import url("./blog.css");
+
+@import url("../public/assets/css/responsive-1.css");
+@import url("../public/assets/css/responsive.2.css");
+@import url("../public/assets/css/footer.css");
+@import url("../public/assets/css/header.css");
+@import url("../public/assets/css/customLoader.css");
+@import url("../public/assets/css/login.css");
+
+@import url("../node_modules/swiper/swiper.min.css");
+
+#app {
+  height: 100%;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main.main-page-container {
+  margin-top: 90px;
+}
+
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.button-footer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.rs-modal {
+  margin: 220px auto 0;
+}
+
+.rs-modal-content {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.rs-modal-content .modal-title {
+  color: #000;
+}
+
+.button-style {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-size: 1rem;
+  letter-spacing: 0px;
+  padding: 0.25rem 1rem;
+  transition: all 300ms ease;
+}
+
+.primary-button {
+  background-color: #e6007e;
+  border-color: #e6007e;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #fff;
+  color: #e6007e;
+}
+
+.outline-button {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+.outline-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.image-file-container {
+  position: relative;
+}
+
+.image-file-container.show-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.image-file-container.show-image img {
+  object-fit: cover;
+  object-position: center;
+}
+.image-file-container.show-file {
+  width: 200px;
+  height: 100px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #000;
+  padding-top: 0.5rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.image-file-container .icon-file-content {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: #8d0808;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  background-color: #8a8a8a3a;
+}
+
+.image-file-container .icon-file-content:hover {
+  color: #ff0000;
+  padding: 1rem;
+  background-color: #707070bd;
+}
+
+.file-uploader {
+  padding: 0.3rem 1rem;
+  background-color: #000;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 20px;
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+}
+
+.file-uploader input[type="file"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+h1 {
+  color: #003366;
+  text-align: center;
+}
+h2 {
+  color: #00509e;
+}
+p {
+  margin: 10px 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin: 5px 0;
+}
+.hours,
+.pricing {
+  margin: 15px 0;
+}
+.pricing table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pricing th,
+.pricing td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.pricing th {
+  background-color: #f2f2f2;
+}
+.LinkHover :hover {
+  color: blue !important;
+}
+.progress-container {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  direction: ltr;
+}
+
+/* Progress bar element */
+.progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #555;
+  position: relative;
+}
+
+/* Change progress bar fill */
+.progress-bar::-webkit-progress-value {
+  background-color: #1da1f2;
+  border-radius: 10px;
+}
+
+.progress-bar::-moz-progress-bar {
+  background-color: #1da1f2;
+  border-radius: 10px;
+}
+
+/* Style for the circle (thumb) in the center */
+.progress-thumb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: #1da1f2;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transform: translateX(-50%);
+  transition: left 0.5s ease;
+}
+
+/* Optional: For custom mark or small dots */
+.progress-mark {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: #1da1f2;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+}
+
+.mark-left {
+  left: 0;
+}
+
+.mark-right {
+  right: 0;
+}
+/* order List */
+/* leaflet.css */
+/* LeafletCard.css */
+.leaflet-card {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.leaflet-image {
+  width: 150px; /* Adjust based on your actual image sizes */
+  height: auto;
+  margin-right: 20px;
+}
+
+.leaflet-details {
+  flex-grow: 1;
+}
+
+.leaflet-details h2 {
+  margin-bottom: 5px;
+}
+
+.leaflet-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leaflet-details ul li {
+  margin-bottom: 4px;
+}
+
+.leaflet-details button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.leaflet-details button:hover {
+  background-color: #0056b3;
+}
+.leaflet-card-items {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+}
+.card-item {
+  display: flex;
+  width: 100%;
+}
+.card-item-border {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.body404 {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: black;
+  text-align: center;
+}
+
+.graphic404 {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box404 {
+  width: 60px;
+  height: 80px;
+  transform: rotate(15deg);
+}
+
+.cyan404 {
+  background: #00aeef;
+}
+.magenta404 {
+  background: #ec008c;
+}
+.yellow404 {
+  background: #fff200;
+}
+.black404 {
+  background: #000;
+}

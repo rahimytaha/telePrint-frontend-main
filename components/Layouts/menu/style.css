@@ -1,0 +1,122 @@
+/** @format */
+
+.side_bar {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  background: #dededf;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.side_bar.opened {
+  animation: open 0.5s;
+  transform: translateX(0);
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes open {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes open {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+body:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  transition: 0.35s;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+body.opened_sidebar:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===== */
+.side_bar .profile_header {
+  padding: 20px 15px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.profile_header .img {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
+.profile_header .user_name {
+  color: #000000;
+  font-size: 10.5pt;
+}
+.profile_header .type {
+  color: #c2c5d2;
+  font-size: 8pt;
+  margin: 0 0 7px 0;
+}
+.profile_header .credit span {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 5px 0 5px;
+  border-radius: 3px;
+  color: #dadada;
+  font-family: "abc-b";
+  font-size: 8.5pt;
+}
+.cricle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3ce2d4;
+  margin-left: 5px;
+}
