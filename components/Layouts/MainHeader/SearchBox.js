@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 import { FrontPages } from "../../../api/Api";
 import Link from "next/link";
