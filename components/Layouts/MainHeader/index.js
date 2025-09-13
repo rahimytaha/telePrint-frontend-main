@@ -14,6 +14,7 @@ import { cart } from "../../../api/Api"
 //svg
 import MenuSvg from "../../../public/assets/svg/menu"
 import Logo from "../../../public/assets/svg/mainLogo"
+import Logo2 from "../../../public/assets/svg/mainLogo2"
 import SearchBox from "./SearchBox"
 const cookies = new Cookies()
 
@@ -201,9 +202,12 @@ class Header extends Component {
               <Link href="/">
                 <a>
                   <div className="header-left-items">
-                    <div className="header-img">
+                    <div className="header-img ">
                       <Logo />
                     </div>
+                     <div className="header-img2 ">
+                      <Logo2 />
+                    </div> 
                     <div className="header-title-info">
                       <div className="header-title">TelePrint</div>
                       <div className="header-title-details">Digitaldruck.</div>
@@ -211,7 +215,7 @@ class Header extends Component {
                   </div>
                 </a>
               </Link>
-              <SearchBox/>
+              <SearchBox />
               <div className="header-right-items">
                 {!token ? (
                   <Link prefetch={false} href="/login" passHref>

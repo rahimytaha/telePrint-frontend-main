@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { FrontPages } from "../../../api/Api";
 import Link from "next/link";
-
+import SearchBoxIcon from '../../../public/assets/icon/SearchBoxIcon.png'
+import Image from "next/image";
 const SearchBox = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
@@ -18,8 +19,8 @@ const SearchBox = () => {
       data =
         query === ""
           ? []
-          : data.filter((el) => el.key.toLowerCase().includes(query.toLowerCase()));
-          console.log(data)
+          : data.filter((el) => el.key.toLowerCase().startsWith(query.toLowerCase()));
+      console.log(data)
       setData(data);
     } catch (error) {
       console.log("Err", error);
@@ -27,11 +28,12 @@ const SearchBox = () => {
   }
 
   return (
-    <div style={{ position: "relative", width: "300px", margin: "20px auto" }}>
+    <div id="inpSearchBoxHeader" >
       <input
+
         style={{
           padding: "8px 12px",
-          width:"300px",
+          width: "300px",
           width: "100%",
           borderRadius: "6px",
           border: "1px solid #ccc",
@@ -40,15 +42,18 @@ const SearchBox = () => {
         placeholder="suchen..."
         onChange={(e) => setQuery(e.target.value)}
       />
+      <span>
+        <Image className="SearchBoxIcon" src={SearchBoxIcon} width={40} height={40} />
+      </span>
       {query !== "" && (
         <div
           style={{
             maxHeight: "400px",
             marginTop: "10px",
             overflowY: "auto",
-            width:"300px",
+            width: "300px",
             backgroundColor: "#fff",
-            position:"absolute",
+            position: "absolute",
             border: "1px solid #ddd",
             borderRadius: "6px",
             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
