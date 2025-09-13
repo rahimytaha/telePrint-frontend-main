@@ -44,8 +44,8 @@ const SearchBox = () => {
       />
       <span>
         <svg width="33" height="33" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="30" stroke="black" stroke-width="5" />
-          <line x1="70" y1="70" x2="90" y2="90" stroke="black" stroke-width="5" />
+          <circle cx="40" cy="40" r="30" stroke="black" strokeWidth={5} />
+          <line x1="70" y1="70" x2="90" y2="90" stroke="black" strokeWidth="5" />
           <rect x="85" y="85" width="10" height="10" transform="rotate(45 90 90)" fill="black" />
         </svg>
       </span>
