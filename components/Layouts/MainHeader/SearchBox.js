@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import { FrontPages } from "../../../api/Api";
 import Link from "next/link";
-import SearchBoxIcon from '../../../public/assets/icon/SearchBoxIcon.png'
-import Image from "next/image";
+
 const SearchBox = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
@@ -40,10 +39,15 @@ const SearchBox = () => {
           fontSize: "14px",
         }}
         placeholder="suchen..."
+        value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       <span>
-        <Image className="SearchBoxIcon" src={SearchBoxIcon} width={40} height={40} />
+        <svg width="33" height="33" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="30" stroke="black" stroke-width="5" />
+          <line x1="70" y1="70" x2="90" y2="90" stroke="black" stroke-width="5" />
+          <rect x="85" y="85" width="10" height="10" transform="rotate(45 90 90)" fill="black" />
+        </svg>
       </span>
       {query !== "" && (
         <div
@@ -61,7 +65,8 @@ const SearchBox = () => {
           }}
         >
           {data.map((el, index) => (
-            <Link key={index} href={`${el.canonicalUrl}`} passHref>
+            <Link key={index} href={`/produkte/${el?.canonicalUrl.split("produkte")[1]}`} >
+
               <a
                 style={{
                   display: "block",
@@ -71,8 +76,10 @@ const SearchBox = () => {
                   textDecoration: "none",
                   color: "#333",
                   backgroundColor: "#f9f9f9",
+
                   transition: "background-color 0.2s",
                 }}
+                onClick={() => setQuery("")}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e6f7ff")}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#f9f9f9")}
               >
