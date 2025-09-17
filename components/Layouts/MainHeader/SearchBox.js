@@ -19,7 +19,7 @@ const SearchBox = () => {
         query === ""
           ? []
           : data.filter((el) => el.key.toLowerCase().startsWith(query.toLowerCase()));
-      console.log(data)
+      data.sort((a, b) => a.key.toLowerCase().localeCompare(b.key.toLowerCase()));
       setData(data);
     } catch (error) {
       console.log("Err", error);
@@ -65,7 +65,7 @@ const SearchBox = () => {
           }}
         >
           {data.map((el, index) => (
-            <Link key={index} href={`/produkte/${el?.canonicalUrl.split("produkte")[1]}`} >
+            <Link key={index} href={`/produkte/${el?.key}`} >
 
               <a
                 style={{
