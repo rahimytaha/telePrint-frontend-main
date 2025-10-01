@@ -177,6 +177,9 @@
   .main-text-content {
     min-width: 100%;
   }
+  .anfrageForm{
+    order: 1;
+  }
 
   .payment-section {
     flex-direction: column;

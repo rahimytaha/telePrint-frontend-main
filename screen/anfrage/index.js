@@ -62,6 +62,7 @@ class gride extends Component {
     })
   }
 
+
   open = (funcName, title, message) => {
     Notification[funcName]({
       title: title,
@@ -74,6 +75,7 @@ class gride extends Component {
     const productName = Path.split("name=")[1]
     this.setState({ initialValue: { ...this.state.initialValue, product: productName } })
     this.getData()
+    // alert()
   }
 
   onChange = (name, value) => {
@@ -141,7 +143,7 @@ class gride extends Component {
         })
       }
       reader.readAsDataURL(file)
-    } catch (error) {}
+    } catch (error) { }
     setTimeout(() => {
       this.setState({ [`loading${Name}`]: false })
     }, 5000)
